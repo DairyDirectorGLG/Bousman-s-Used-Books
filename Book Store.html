@@ -1,15 +1,125 @@
 <!DOCTYPE html>
-<!-- saved from url=(0057)file:///C:/Users/ABousman/Downloads/book_store%20(3).html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
+<head>
     <title>Book Store</title>
+    <meta charset="UTF-8">
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; }
-        h1 { text-align: center; }
-        .book { background: white; padding: 15px; margin: 15px auto; border-radius: 8px; max-width: 800px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        .book img { max-width: 150px; float: right; margin-left: 20px; }
-        .contact { background: white; padding: 15px; margin: 15px auto; border-radius: 8px; max-width: 800px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        form input, form textarea { width: 100%; padding: 10px; margin: 5px 0; }
-        form button { padding: 10px 20px; background-color: #28a745; color: white; border: none; cursor: pointer; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #f9d423 0%, #ff4e50 100%);
+            min-height: 100vh;
+        }
+        h1 {
+            text-align: center;
+            background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+            color: #fff;
+            margin: 0 0 30px 0;
+            padding: 30px 0 20px 0;
+            letter-spacing: 2px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+        .book {
+            background: rgba(255,255,255,0.97);
+            padding: 20px;
+            margin: 25px auto;
+            border-radius: 18px;
+            max-width: 800px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+            border-left: 10px solid #43cea2;
+            transition: transform 0.18s, box-shadow 0.18s, border-color 0.3s;
+        }
+        .book:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 16px 32px rgba(0,0,0,0.17);
+            border-left-color: #ff4e50;
+        }
+        .book h2 {
+            color: #185a9d;
+            margin-top: 0;
+            margin-bottom: 10px;
+            letter-spacing: 1.5px;
+        }
+        .book p strong {
+            color: #43cea2;
+        }
+        .book img {
+            max-width: 150px;
+            float: right;
+            margin-left: 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(67,206,162,0.15);
+            border: 2px solid #ffb347;
+            background: #fffbe8;
+        }
+        .book p {
+            color: #444;
+            font-size: 1.07em;
+            margin-bottom: 8px;
+        }
+        .book p:last-child {
+            margin-bottom: 0;
+        }
+        .contact {
+            background: rgba(24,90,157,0.95);
+            color: #fff;
+            padding: 25px;
+            margin: 40px auto 0 auto;
+            border-radius: 18px;
+            max-width: 800px;
+            box-shadow: 0 6px 18px rgba(24,90,157,0.13);
+        }
+        .contact h2 {
+            color: #f9d423;
+            margin-top: 0;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0 18px 0;
+            border-radius: 8px;
+            border: none;
+            font-size: 1.08em;
+            background: #fffbe8;
+            color: #222;
+        }
+        form button {
+            padding: 12px 28px;
+            background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.12em;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: background 0.2s, transform 0.2s;
+        }
+        form button:hover {
+            background: linear-gradient(90deg, #ff4e50 0%, #f9d423 100%);
+            transform: scale(1.04);
+        }
+        @media (max-width: 900px) {
+            .book, .contact {
+                max-width: 96vw;
+            }
+            .book img {
+                max-width: 110px;
+            }
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.4em;
+                padding: 18px 0 14px 0;
+            }
+            .book img {
+                float: none;
+                display: block;
+                margin: 0 auto 15px auto;
+            }
+        }
     </style>
 </head>
 <body>
@@ -17,7 +127,7 @@
 
     <div class="book">
         <h2>Religious</h2>
-        <p><strong>Description:</strong> This book explores the foundational beliefs shared by all Christians, using the Apostles’ Creed as a framework. Keith Drury clearly explains doctrines such as the nature of God, the divinity and resurrection of Jesus, the role of the Holy Spirit, the church, and eternal life. Aimed at both new and seasoned believers, it emphasizes why these core beliefs matter in everyday Christian life and encourages unity across denominations</p>
+        <p><strong>Description:</strong> This book explores the foundational beliefs shared by all Christians, using the Apostles’ Creed as a framework. Keith Drury clearly explains doctrines such as the Trinity, salvation, and the church in an accessible style.</p>
         <p><strong>Condition:</strong> Good - Cover and pages appear clean with minimal wear.</p>
         <p><strong>Price:</strong> $10</p>
         <img src="file:///C:/Users/ABousman/Downloads/book_image_1.jpg" alt="Book Image 1">
@@ -33,7 +143,7 @@
     
     <div class="book">
         <h2>Historical/educational</h2>
-        <p><strong>Description:</strong> This groundbreaking historical study explores the brutal realities of the Atlantic slave trade through the lens of enslaved Africans. Drawing on records from the Royal African Company (1675–1725), Smallwood reconstructs the journey from the Gold Coast to the Americas, focusing on how human beings were commodified and dehumanized during the Middle Passage. The book offers a vivid, intimate portrayal of the physical and psychological toll of slavery, while also examining the cultural and economic systems that sustained it. It is a powerful contribution to the understanding of slavery’s enduring legacy</p>
+        <p><strong>Description:</strong> This groundbreaking historical study explores the brutal realities of the Atlantic slave trade through the lens of enslaved Africans. Drawing on records from ships, merchants, and survivors.</p>
         <p><strong>Condition:</strong> Good - Cover and pages appear clean with minimal wear.</p>
         <p><strong>Price:</strong> $10</p>
         <img src="file:///C:/Users/ABousman/Downloads/book_image_3.jpg" alt="Book Image 3">
@@ -41,7 +151,7 @@
     
     <div class="book">
         <h2>Historical/educational</h2>
-        <p><strong>Description:</strong> This landmark work offers a sweeping history of slavery from its ancient roots to its abolition in the 19th century. David Brion Davis explores the global dimensions of slavery, beginning with the Amistad case and extending through the Atlantic slave trade, slavery in the Americas, and the rise of anti-black racism. The book examines the economic, political, and cultural forces that sustained slavery and highlights the efforts of abolitionists who fought to end it. With deep scholarship and powerful narrative, Davis presents slavery as central to the development of the modern world and the American nation</p>
+        <p><strong>Description:</strong> This landmark work offers a sweeping history of slavery from its ancient roots to its abolition in the 19th century. David Brion Davis explores the global impact of slavery.</p>
         <p><strong>Condition:</strong> excellent - Cover and pages are clean with minimal wear.</p>
         <p><strong>Price:</strong> $15</p>
         <img src="file:///C:/Users/ABousman/Downloads/book_image_4.jpg" alt="Book Image 4">
@@ -49,7 +159,7 @@
     
     <div class="book">
         <h2>Educational</h2>
-        <p><strong>Description:</strong> This comprehensive anthology offers a guided journey through the Western philosophical tradition, from ancient Greece to contemporary thought. Featuring 144 carefully selected extracts from major philosophers—including Plato, Descartes, Aquinas, Machiavelli, William James, and Wittgenstein—each reading is introduced with clear commentary and followed by focus questions and further reading suggestions. The third edition includes new classic texts and an introductory essay by Cottingham on how to read and write about philosophy, making it an essential resource for students and enthusiasts alike.</p>
+        <p><strong>Description:</strong> This comprehensive anthology offers a guided journey through the Western philosophical tradition, from ancient Greece to contemporary thought. Featuring 140 classic and contemporary readings.</p>
         <p><strong>Condition:</strong> Very Good - Cover and pages appear clean with minimal wear.</p>
         <p><strong>Price:</strong> $20</p>
         <img src="file:///C:/Users/ABousman/Downloads/book_image_5.jpg" alt="Book Image 5">
@@ -57,7 +167,7 @@
     
     <div class="book">
         <h2>Educational</h2>
-        <p><strong>Description:</strong> This practical textbook equips students with the math skills essential for success in modern agriculture. Covering a wide range of topics—from crop and livestock production to horticulture and financial management—it provides step-by-step instructions for solving real-world agricultural problems using math and logic. With clear explanations, case studies, and sample problems, it’s a valuable resource for students and professionals in any agricultural field</p>
+        <p><strong>Description:</strong> This practical textbook equips students with the math skills essential for success in modern agriculture. Covering a wide range of topics—from crop and livestock calculations to agribusiness planning.</p>
         <p><strong>Condition:</strong> Good - Cover and pages appear clean with minimal wear.</p>
         <p><strong>Price:</strong> $10</p>
         <img src="file:///C:/Users/ABousman/Downloads/book_image_6.jpg" alt="Book Image 6">
@@ -65,7 +175,7 @@
     
     <div class="book">
         <h2>Educational</h2>
-        <p><strong>Description:</strong> This textbook empowers students to take control of their personal well-being by helping them assess current behaviors, identify areas for improvement, and implement practical strategies for lifelong health. It combines real-life stories, hands-on activities, and online resources to reinforce key wellness concepts. The 16th edition offers updated guidelines and tools for creating sustainable fitness and wellness programs, making it a comprehensive guide for students pursuing healthier lifestyles</p>
+        <p><strong>Description:</strong> This textbook empowers students to take control of their personal well-being by helping them assess current behaviors, identify areas for improvement, and set achievable goals.</p>
         <p><strong>Condition:</strong> Excellent - Cover and pages are clean with minimal wear.</p>
         <p><strong>Price:</strong> $10</p>
         <img src="file:///C:/Users/ABousman/Downloads/book_image_7.jpg" alt="Book Image 7">
@@ -73,7 +183,7 @@
     
     <div class="book">
         <h2>Educational</h2>
-        <p><strong>Description:</strong> The book&nbsp;Microsoft Excel 2019 Data Analysis and Business Modeling&nbsp;by&nbsp;Wayne Winston&nbsp;is a comprehensive, hands-on guide designed to help users harness the full power of Excel for business analysis and decision-making.</p>
+        <p><strong>Description:</strong> The book Microsoft Excel 2019 Data Analysis and Business Modeling by Wayne Winston is a comprehensive, hands-on guide designed to help readers master data analysis and business modeling skills using Excel.</p>
         <p><strong>Condition:</strong> New</p>
         <p><strong>Price:</strong> $50</p>
         <img src="file:///C:/Users/ABousman/Downloads/book_image_8.jpg" alt="Book Image 8">
@@ -81,7 +191,7 @@
     
     <div class="book">
         <h2>Children's</h2>
-        <p><strong>Description:</strong> This collection features twelve short, fun-filled adventures starring the ever-cool Pete the Cat. From racing with Turtle and swimming with Bob to building a playground and battling a dragon, each story is packed with colorful illustrations and positive messages. Perfect for bedtime or quick reading sessions, these tales celebrate friendship, creativity, and staying groovy no matter what</p>
+        <p><strong>Description:</strong> This collection features twelve short, fun-filled adventures starring the ever-cool Pete the Cat. From racing with Turtle and swimming with Bob to building a treehouse and playing baseball.</p>
         <p><strong>Condition:</strong> Excellent-No wear or tear in the book.</p>
         <p><strong>Price:</strong> $10</p>
         <img src="file:///C:/Users/ABousman/Downloads/book_image_9.jpg" alt="Book Image 9">
@@ -89,7 +199,7 @@
     
     <div class="book">
         <h2>Price; $10</h2>
-        <p><strong>Description:</strong> This delightful two-book collection follows the adventures of Library Fish, a curious and literary goldfish who lives in a library. In the first story, she finds a home with Mr. Hughes and discovers the joy of books, story time, and community. In the second, a snowstorm leaves the library empty, prompting Library Fish to bravely explore her surroundings for the first time. With charming illustrations and heartwarming messages, these stories celebrate curiosity, courage, and the magic of reading</p>
+        <p><strong>Description:</strong> This delightful two-book collection follows the adventures of Library Fish, a curious and literary goldfish who lives in a library. In the first story, she explores the library at night; in the second, she assists with storytime.</p>
         <p><strong>Condition:</strong> Excellent-No wear and tear, practically brand new</p>
         <p><strong>Price:</strong>$10</p>
         <img src="file:///C:/Users/ABousman/Downloads/book_image_10.jpg" alt="Book Image 10">
@@ -97,7 +207,7 @@
     
     <div class="book">
         <h2>Children’s</h2>
-        <p><strong>Description:</strong> This lyrical picture book follows a litter of wolf pups born under a full moon deep in the forest. Over the course of a lunar cycle, the pups grow from blind newborns to playful explorers, guided by their mother and the pack. With rhyming verse and enchanting illustrations by Chuck Groenink, the story captures the wonder of nature, the rhythm of life, and the bond between family and community. It’s a heartwarming tale perfect for young readers and animal lovers alike</p>
+        <p><strong>Description:</strong> This lyrical picture book follows a litter of wolf pups born under a full moon deep in the forest. Over the course of a lunar cycle, the pups grow from blind newborns to playful explorers.</p>
         <p><strong>Condition:</strong> Excellent-Like Brand New</p>
         <p><strong>Price:</strong> $10</p>
         <img src="file:///C:/Users/ABousman/Downloads/book_image_11.jpg" alt="Book Image 11">
@@ -105,7 +215,7 @@
     
     <div class="book">
         <h2>Comic</h2>
-        <p><strong>Description:</strong> The Authoritative Calvin and Hobbes is a treasury that brings together some of the most beloved comic strips from Bill Watterson’s iconic series. This large-format collection includes cartoons from Yukon Ho! and Weirdos from Another Planet!—along with full-color Sunday strips and an original story unique to this edition</p>
+        <p><strong>Description:</strong> The Authoritative Calvin and Hobbes is a treasury that brings together some of the most beloved comic strips from Bill Watterson’s iconic series. This large-format collection is a must-have for fans.</p>
         <p><strong>Condition:</strong> Very good-Dust cover is in good condition.  Pages are good.</p>
         <p><strong>Price:</strong> $10</p>
         <img src="file:///C:/Users/ABousman/Downloads/book_image_12.jpg" alt="Book Image 12">
@@ -131,6 +241,5 @@
             <button type="submit">Send</button>
         </form>
     </div>
-
-
-</body></html>
+</body>
+</html>
